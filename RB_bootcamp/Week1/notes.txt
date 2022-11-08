@@ -1,0 +1,12 @@
+* Whenever you define a function that returns an elemet, you can either render the element by calling the function or by doing the following: <FunctionWithElement />
+
+* What I mentioned before of rendering an element by a function is called function component. A component is basically an independent and reusable piece of code.
+
+* There are two main different types of components:
+    - Function components (more modern and most common)
+    - Class components (older and not as much used)
+
+* You can pass in arguments to your components using props. Props are aobject with the passed arguments. Props are immutable. If you try to change them, an exception is thrown.
+
+
+
