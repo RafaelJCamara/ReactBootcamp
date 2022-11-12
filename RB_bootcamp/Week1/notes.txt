@@ -8,5 +8,5 @@
 
 * You can pass in arguments to your components using props. Props are aobject with the passed arguments. Props are immutable. If you try to change them, an exception is thrown.
 
-
+* Sometimes you want to keep track of value changes that occur in a field (ex. keeping track of changes in the input field). The values that we are tracking are called State.
 
