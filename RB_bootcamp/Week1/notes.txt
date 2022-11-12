@@ -10,3 +10,11 @@
 
 * Sometimes you want to keep track of value changes that occur in a field (ex. keeping track of changes in the input field). The values that we are tracking are called State.
 
+* When you are creating components, you want to store them in their separate file. This file can either have the .js extension or the .jsx extension.
+
+* Whenever we are using forms and want to clear the value from the inputs, we can use a special type of component called controlled component.
+
+
+
+
+

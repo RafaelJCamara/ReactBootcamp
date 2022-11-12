@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 //this is called JSX - meaning Javascript XML
 const greetings = <div>Hello React!</div>;
@@ -155,7 +156,7 @@ function App_old_2(){
 }
 
 const endpoint = "https://api.github.com/users/";
-function App(){
+function App_old_3(){
 
     const [user, setUser] = React.useState(null);
     const [username, setUsername] = React.useState("RafaelJCamara");
