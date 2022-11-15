@@ -3,10 +3,18 @@ import Login from './components/Login';
 import Header from './components/Header';
 import CreatePost from './components/CreatePost';
 import PostList from './components/PostList';
+import postReducer from './reducer/postreducer';
+
+export const UserContext = React.createContext();
+export const PostContext = React.createContext({
+    posts: []
+});
 
 function App(){
     const [user, setUser] = React.useState('');
     const [posts, setPosts] = React.useState([]);
+    const initialPostState = React.useContext(PostContext);
+    const [state, dispatch] = React.useReducer(postReducer, initialPostState);
 
     React.useEffect(()=>{
         document.title = user? `${user}'s feed` : 'Please login';
@@ -24,11 +32,14 @@ function App(){
     }
 
     return (
-            <div>
-                <Header username={user} setUser={setUser} />
-                <CreatePost username={user} handleNewPost={handleNewPost} />
-                <PostList posts={posts} />
-            </div>
+
+            <PostContext.Provider value={{state, dispatch}}>
+                <UserContext.Provider value={user}>
+                    <Header username={user} setUser={setUser} />
+                    <CreatePost username={user} handleNewPost={handleNewPost} />
+                    <PostList posts={state.posts} />
+                </UserContext.Provider>
+            </PostContext.Provider>
         )
 }
 

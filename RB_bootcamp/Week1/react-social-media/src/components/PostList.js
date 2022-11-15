@@ -7,7 +7,7 @@ function PostList(props){
             {
                 props.posts.map(
                     (post, index) => (
-                        <Post post={post} key={index}/>
+                        <Post post={post} key={post.id}/>
                     )
                 )
             }

@@ -14,6 +14,27 @@
 
 * Whenever we are using forms and want to clear the value from the inputs, we can use a special type of component called controlled component.
 
+* There's something we must have in consideration, which is passing values as props n-levels until we reach the component that we need this info on. This is called prop drilling.
+    - The way we can solve this prop drilling is by using context (with .createContext).
+    - The context returned from the .createContext method has two important properties: a Provider (which is responsible for providing the context values, and a Consumer, which will consume the context value given by the Provider)
+
+* Instead of passing down the function to update state (ex. setUser function), we can use something in React which is called a React Reducer, which will help us in those updates.
+
+* Below you can see the function definition of a Reducer:
+    /*
+        @previousState: state previous to the action execution
+        @action: object that contains informations of what happened. Object structure: {type:<type_of_action>, payload: <information_changed_after_action>}
+        function userReducer(previousState, action){
+        }
+
+        (state, action) -> newState
+    */
+
+* The main goal of a Reducer is to avoid the mess of drilling down the update state function.
+
+* The reducer is a pure function, meaning that it doesn't have side effect, since it doesn't communicate with the outside world.
+    - Pure functions are determenistic.
+
 
 
 
