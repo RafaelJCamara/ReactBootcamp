@@ -1,0 +1,43 @@
+.mainContent {
+    background-image: url("https://wallpaperaccess.com/full/3949078.jpg");
+    /*
+        Sets the background image to cover the entire container
+    */
+    background-size: cover;
+    /*
+        Centers the image in the container
+    */
+    background-position: center;
+    padding: 57px 27px;
+}
+
+.factsList {
+    list-style: none; /* Remove default bullets */
+  }
+  
+
+  /*
+    One way of chaging the bulletpoints color
+  */
+.factsList li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #61DAFB; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/*
+    Another way of doing this change of bullet point size and color is using the psudo-selector marker
+.factsList > li::marker {
+    font-size: 1.4rem;
+    color: #61DAFB;
+}
+*/
+
+
+.factsList li {
+    padding-block: 10px;
+    line-height: 19px;
+}

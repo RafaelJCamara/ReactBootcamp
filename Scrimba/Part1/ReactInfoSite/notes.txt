@@ -1,0 +1,25 @@
+* One of the reasons why people like React is that is enables us to create more modular code, and avoid those long HTML pages like the old times.
+    - React is composable, meaning that we create small pieces to create something greater than the individual pieces.
+
+* Another reason why people like React is that it has a declarative style.
+    - Doing this in an imperative way is more verbose.
+
+* React uses something called JSX (Javascript XML)
+    - This is a flavor of JavaScript with HTML.
+    - The element returned by JSX is a simple JavaScript object
+
+* When rendering in the root element, we must guarantee that there is only one parent element.
+    - If we want to render multiple sibling elements, we must wrap them up with a single parent element (ex. inside a div)
+
+* JSX elements are regular javascript objects.
+
+* Components in React must be writen in Pascal case.
+    - They are mostly created using functions.
+    - As said before, they should be writen in Pascal case.
+    - In order to call the component, we should use HTML like notation, with a self closing tag with the name of the component/function.
+    - A component is a function that returns React elements.
+
+* To style elements, we must use className instead of class.
+
+
+
