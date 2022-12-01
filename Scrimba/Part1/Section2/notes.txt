@@ -1,0 +1,5 @@
+* If we want to insert re-usability of our components, we must not make them use hard coded information.
+    - We must, somehow, be able to let information change.
+    - For example, if we have a funcion that only returns the sum of 1 plus 2, the usabbility of this function is very limited/scoped.
+    - But if we send the numbers to add as parameters, now we can re-use the function elsewhere in different scenarios.
+
