@@ -3,3 +3,8 @@
     - For example, if we have a funcion that only returns the sum of 1 plus 2, the usabbility of this function is very limited/scoped.
     - But if we send the numbers to add as parameters, now we can re-use the function elsewhere in different scenarios.
 
+* There's a way on which we can insert regular javascript inside JSX.
+    - And the way we do so is by using our javascript inside {}
+
+* Whenever we crate a component in another file, we always do "export default" the function that creates the component, so that it can be imported by another function.
+
