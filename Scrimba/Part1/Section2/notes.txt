@@ -8,3 +8,22 @@
 
 * Whenever we crate a component in another file, we always do "export default" the function that creates the component, so that it can be imported by another function.
 
+* One common thing that we do is to destructure the props object in the component function definition.
+
+* To pass props that aren't strings, what we need to do is pass them with {} (ex. upvotes={10} or isPun={true]})
+    - We can even pass objects to our props.
+
+* React knows how to render arrays.
+    - Say you to a div an array os JSX elements.
+    - React will know how to render them in the proper way, you just need to pass the array normally: {array_to_render}
+
+* Whenever we are render lists/arrays, we often get the following error: "(...) list should have a unique "key" prop. (...)"
+    - To solve this problem, we would have to pass in a prop called key, with a unique value among the components we are going to render.
+
+* As we've said before, we can pass objects as props to our components.
+    - We also saw that this could be a better way of passing props, instead of having to manually pass each and every prop we wanted.
+    - There's also an alternative to this, which is to spread the object.
+    - By spreading the object, what we are doing is creating a prop for each property of said object (with the same name it had on the object)
+
+
+
