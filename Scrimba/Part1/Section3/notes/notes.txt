@@ -16,4 +16,7 @@
 * The React.useState method returns an array with tho positions:
     - In the first position, we have the initial state value (that can be set when we first initialize the useState method). This is the value whose changes we are going to track.
     - In the second position, we have a function whose purpose is to update the value of the state defined above.
+        -> Whenever we run this function, our frontend will re-render.
+        -> This function passes as parameter the old value of the variable we want to change state. Instead of just using directly the value of this variable, we should use the callback with the old value, which is a best practice.
+            - We are not guaranteed on the order of execution of our update functions, so using the callback guarantees us that we will have the most updated state for that variable.
 
