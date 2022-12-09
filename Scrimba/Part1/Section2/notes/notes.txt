@@ -25,5 +25,6 @@
     - There's also an alternative to this, which is to spread the object.
     - By spreading the object, what we are doing is creating a prop for each property of said object (with the same name it had on the object)
 
+* A react hook (like, for example, useState), is a function that lets you "hook into" React state and lifecycle features from function components.
 
 
