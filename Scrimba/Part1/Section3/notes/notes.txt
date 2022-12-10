@@ -1,0 +1,22 @@
+* We have seen something interesting happen in this section, related to the rendering of an array that we changed values when clicking a button.
+    - When we clicked the button, the new element was inserted in the array.
+    - But, altough the array was modified, the page remained with the initial values of the array.
+    - The expected behaviour was that the page would present the updated values of the array, something that actually did not happen.
+    - To solve this problem, we introduced the concept of state.
+
+* First, let's clarify the concept of prop.
+    - We can view props as properties being passed to a component, that are needed for such component to work properly.
+    - This is a similar behaviour to what we expect in functions, where we receive arguments "from above".
+    - One important aspect to notice here is props passed to a component are immutable, meaning the component receiving such props can't modify them.
+
+* State refers to values that are managed by the component, similar to variables declared inside a function.
+    - Any time we have changing values that should be saved/display, we most likely will use state.
+    - In React, state is managed using the React.useState method.
+
+* The React.useState method returns an array with tho positions:
+    - In the first position, we have the initial state value (that can be set when we first initialize the useState method). This is the value whose changes we are going to track.
+    - In the second position, we have a function whose purpose is to update the value of the state defined above.
+        -> Whenever we run this function, our frontend will re-render.
+        -> This function passes as parameter the old value of the variable we want to change state. Instead of just using directly the value of this variable, we should use the callback with the old value, which is a best practice.
+            - We are not guaranteed on the order of execution of our update functions, so using the callback guarantees us that we will have the most updated state for that variable.
+
