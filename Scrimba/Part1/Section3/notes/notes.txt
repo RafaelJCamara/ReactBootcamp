@@ -20,3 +20,7 @@
         -> This function passes as parameter the old value of the variable we want to change state. Instead of just using directly the value of this variable, we should use the callback with the old value, which is a best practice.
             - We are not guaranteed on the order of execution of our update functions, so using the callback guarantees us that we will have the most updated state for that variable.
 
+* Whenever we change the state of an attribute defined in a component, React will re-render all the child components of that component, either if that component depends to that attribute or not.
+
+
+
