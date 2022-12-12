@@ -30,4 +30,13 @@
         - There is a problem with this approach, and the problem is that we will have two sources of truth: the parent component and the child component.
     
     -> Another way we can do this is by maintaining the state in the main component and then pass down to components the functions that updates the state
-    
+
+
+* One of the most important things we do in React is conditional rendering.
+    -> This just means that we are going to render things based on a condition.
+        - One of the operators is the && operator, that we normally see in the if statements. If the left hand side is false, it won't render the element. If positive, the element will be rendered.
+        - The other operator is the ternary (?) operator.
+
+    -> This kind of conditional rendering is not possible in traditional HTML, where you need to render everything that you hardcode into it.
+        - With React's conditional rendering, you can select what element to render based upon on a certain condition being met.
+
