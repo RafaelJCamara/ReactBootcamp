@@ -23,4 +23,11 @@
 * Whenever we change the state of an attribute defined in a component, React will re-render all the child components of that component, either if that component depends to that attribute or not.
 
 
-
+* There are multiple ways of maintaining state in our application, particularlly when it comes to maintain state in our child components.
+    -> One way that we can do it is by maintaining state in the child components, and let them handle their on state and its respective changes.
+        - This might be a bad approach in the case that this state is initialized based on props that come from the parent component.
+        - We call state that is initialized by incoming prop, derived state.
+        - There is a problem with this approach, and the problem is that we will have two sources of truth: the parent component and the child component.
+    
+    -> Another way we can do this is by maintaining the state in the main component and then pass down to components the functions that updates the state
+    
