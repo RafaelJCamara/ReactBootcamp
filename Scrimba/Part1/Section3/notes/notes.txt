@@ -40,3 +40,15 @@
     -> This kind of conditional rendering is not possible in traditional HTML, where you need to render everything that you hardcode into it.
         - With React's conditional rendering, you can select what element to render based upon on a certain condition being met.
 
+
+* React has 3 main primary tasks:
+    (1) -> Works with DOM/browser to render UI to the page
+    (2) -> Manages state for us between render cycles (i.e. state values are "remembered" from one render to the next)
+    (3) -> Keeps UI updated whenever state changes occur
+
+* React can't handle stuff on its own (called [out]side effects):
+    -> API/database interactions
+    -> Subscriptions (ex. web sockets on a chat)
+    -> local storage
+    -> side effects is basically anything React isn't in charge of
+
