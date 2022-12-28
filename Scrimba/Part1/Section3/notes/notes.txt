@@ -40,6 +40,43 @@
     -> This kind of conditional rendering is not possible in traditional HTML, where you need to render everything that you hardcode into it.
         - With React's conditional rendering, you can select what element to render based upon on a certain condition being met.
 
+=> Forms
+
+* The most common way to keep track of forms changes in form elements, is by using a callback function that will be called whenever something changes in the form element (the famous onChange event)
+    -> The problem with this inital approach is that we might be tempted to create an onChange function for each and every element of our form.
+        - This works fine when our form has 2/3 elements (rare scenario)
+        - There is a better way to keep track of this changes, which is to create a general change function, and give each element a name tag, which corresponds to the key property of the object to be updated.
+            -- Having this information about what field was changed, we can also access the new value (it's inside the event parameter passed to our callback function)
+            -- event.target.name corresponds to the key changed and the event.target.value to the new added value
+
+* One important thing to keep in mind here is that we must add a value property to our form field.
+    -> This happens because we must have only one source of truth, which is a part of something called "controlled inputs"
+    -> Instead of having the value we insert dictate what is being displayed in the forn, we must have that value coming from the respective state property.
+
+* When you submit a form, you want to run the following command on the onSubmit function: event.preventDefault().
+    -> If you do that, your input fields won't go into the URL and the page won't reload.
+
+* Some trivia about forms:
+    -> In a vanilla JS app, at what point in the form submission process do you gather all the data from the filled-out form?
+        - Right before the form is submitted.
+        - Normally we listen for an event event, and then collect the data inserted on each field.
+
+    -> In a React app, when do you gather all the data from the filled-out form?
+        - In React, we don't wait for the form to be submitted to collect all the data from it's fields.
+        - The data is collected as the form is being changed (ex. in a text element we change state in every keystroke).
+        - This data is held in local state.
+
+    -> Which attribute in the form elements (value, name, onChange, etc.) should match the property name being held in state for that input?
+        - The "name" attribute.
+
+    -> What's different about saving the data from a checkbox element vs. other form elements?
+        - In the other elements, we are storing the values with the "value" attribute.
+        - In the case of a checkbox element, we are changing the value based on the checked attribute.
+
+    -> How do you watch for a form submit? How can you trigger a form submit?
+        - You can watch a form submit by having an onSubmit handler on the form element.
+        - The way you can trigger the submission is by either having a button on the form or an input of type submit.
+
 
 * React has 3 main primary tasks:
     (1) -> Works with DOM/browser to render UI to the page
